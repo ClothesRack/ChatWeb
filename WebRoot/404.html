@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>404.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <div style="color:red; background-color:#ACE;text-align:center;">
+    	<p>访问出错啦！</p>
+    	<h1 id='mes'>您试图访问不存在的页面，出错啦！5秒后自动返回登录页面....</h1>
+    </div>
+  </body>
+</html>
+<script>
+	var h1 = document.getElementById('mes');
+	var a =5;
+	
+	function forto(){
+		
+		h1.innerHTML = "您试图访问不存在的页面，出错啦！"+--a+"秒后自动返回登录页面....";
+	}
+	var timer = setInterval(forto, 1000);
+	setTimeout("abc()",5000);
+	function abc(){
+	
+		top.location='/chat/login.jsp'; 
+	}
+
+</script>
